@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Fio & Davi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+  </head>
+<body onload="fun()"><!-- You didn't invoke the function here -->
+<div class="container ">
+  <form action="/confirmar" method="post">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Nombre</label>
+        
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="fname" disabled="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">¿Asistirán al evento?</label>
+        </div>
+        <div class="col-75">
+          <p>
+            <label>
+              <input type="radio" class="with-gap" name="asistencia" value="si" />
+              <span>Sí</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" class="with-gap" name="asistencia" value="no" />
+              <span>No</span>
+            </label>
+          </p>
+        </div>
+      </div>
+   
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Descripción</label>
+        </div>
+        <div class="col-75">
+          <textarea id="descripcion" name="descripcion" placeholder="En el caso que alguna persona no asista dentro de los espacios reservados, por favor indique el nombre. De lo contrario indique que asisten todos" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <button type="submit" class="btn " onclick="act()" >Consultar</div>
+        </form>
+        <div class="row">
+        <button id="GetButton"  class="btn  " onclick="prin()">Regresar
+        </div>
+      </div>
+    
+  </div>
+
+ 
+
+  
+  <%- include ('_footer.ejs'); -%>
+
+  
